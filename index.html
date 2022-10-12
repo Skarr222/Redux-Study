@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redux Exercise</title>
+  </head>
+  <body>
+    <form>
+      <label> Name: <input id="firstName" type="text" /> </label>
+      <label> SurrName: <input id="surrName" type="text" /> </label>
+      <label> Age: <input id="age" type="text" /> </label>
+      <button id="submitButton" type="submit">Submit</button>
+    </form>
+    <ul id="peopleList"></ul>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"
+      integrity="sha512-P36ourTueX/PrXrD4Auc1kVLoTE7bkWrIrkaM0IG2X3Fd90LFgTRogpZzNBssay0XOXhrIgudf4wFeftdsPDiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const NAME_ID = "firstName";
+      const SURR_NAME_ID = "surrName";
+      const AGE_ID = "age";
+      const SUBMIT_BUTTON_ID = "submitButton";
+      const PEOPLE_LIST_ID = "peopleList";
+
+      const nameElement = document.getElementById(NAME_ID);
+      const surrNameElement = document.getElementById(SURR_NAME_ID);
+      const ageElement = document.getElementById(AGE_ID);
+      const submitButtonElement = document.getElementById(SUBMIT_BUTTON_ID);
+      const peopleListElement = document.getElementById(PEOPLE_LIST_ID);
+
+      formElement.addEventListener("submit", handleOnSubmit);
+
+      //REDUX BEGINING
+      const { createStore } = Redux;
+      const store = createStore(reducer);
+
+      // Object of action => {type: TYPE_OF_ACTION}
+      function reducer(state = [], action)
+
+      //REDUX END
+      function handleOnSubmit(event) {
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
